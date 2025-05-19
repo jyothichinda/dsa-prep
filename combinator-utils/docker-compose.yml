@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  combinator-utils:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: combinator-api
+    ports:
+      - "9000:9000"
+    env_file:
+      - .env
+    restart: unless-stopped
